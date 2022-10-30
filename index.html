@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Tailwindcss</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Raleway:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            nav a {
+                @apply text-nav hover:text-black font-raleway;
+            }
+
+            nav a.active {
+                @apply text-black;
+            }
+
+            .button-primary {
+                @apply bg-primary py-[12px] px-[30px] text-white rounded-full hover:bg-secondary;
+            }
+
+            .text-gradient {
+                background: linear-gradient(90.01deg, #E18700 35.24%, #FF32AD 66.21%, #0EC5D7 97.18%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+            .left-side{
+                    font-weight: 700;
+                    font-size: 32px;
+                    line-height: 40px;
+            }
+
+            .container-1{
+                background: linear-gradient(109.58deg, #0EC5D7 0%, #FF32AD 51.04%, #FF9213 100%);
+                @apply text-white
+            }
+        }
+    </style>
+<body>
+    <header class="bg-header">
+        <section class="container mx-auto">
+            <section id="topbar" class="flex justify-between gap-10 items-center py-5">
+                <div id="left-side" class="flex gap-10 items-center">
+                    <img src="./property/Logo.png" alt="">
+                    <nav>
+                        <ul class="flex gap-5 items-center">
+                            <li><a href="#" class="active">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Work</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="right-side" class="flex items-center gap-10">
+                    <button>
+                        <img src="./property/search.png" alt="">
+                    </button>
+                    <a href="#get-started" class="button-primary">Get Started</a>
+                </div>
+            </section>
+        </section>
+        <section id="hero" class="flex flex-col gap-5">
+            <div class="max-w-[700px] mx-auto mt-[100px]">
+                <h1 class="text-2xl lg:text-4xl xl:text-5xl text-center font-nunito font-bold">It's Fun To Build a Website With The <span class="text-gradient">Mangcoding Team</span></h1>
+                <p class="text-center py-5">The Mangcoding team will help build a website for your company with quality and guaranteed services, with custom templates you can create a website as you like.</p>
+            </div>
+            <div class="action mx-auto flex justify-center items-center gap-10">
+                <a href="get started" class="button-primary">Get Started</a>
+                <a href="#" class="underline flex items-center gap-5 hover:no-underline">Explore our blog <img src="./property/Vector.png" alt=""></a>
+            </div>
+            <img src="./property/Design.png" alt=""  class="mx-auto">
+            <div class="mx-auto">
+                <p class="text-center py-5">Brand That Trust Us</p>
+                <ul class="flex gap-5 items-center">
+                    <li>
+                        <img src="./property/image 1.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./property/image 2.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./property/image 3.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./property/image 4.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./property/Frame.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./property/image 5.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </header>
+    <section class="container-1 mx-auto">
+        <div class="text-left font-raleway p-20">
+            <h2 class="font-bold text-xl p-5">Services Our<br>Mangcoding Team</h2>
+        </div> 
+        <div class="flex">
+            <div id="left-side" class="flex items-center gap-10">
+                <p class="text-sm m-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate excepturi at doloremque dicta sed, saepe natus beatae exercitationem.</p>
+            </div> 
+            <div id="right-side" class="flex items-center gap-10">
+                <a href="#build Website" class="button-primary">Build Website</a>
+            </div>
+        </div>          
+        <div class="container flex box-border">
+            <div class="card w-3/4 flex flex-wrap justify-center">
+                <div class="rounded-lg border-2 border-color: inherit; w-5/12 m-1 p-5">
+                    <img src="./property/Shopify.png" alt="" class="mx-auto">
+                    <h2  class="text-center font-bold text-base" >Shopify Theme Development</h2>
+                    <p class="text-center text-sm">Start from 700 USD for project base or 35 USD per hour</p>
+                </div>
+                <div class="rounded-lg border-2 border-color: inherit; w-5/12 m-1 p-5">
+                    <img src="./property/php.png" alt="" class="mx-auto">
+                    <h2 class="text-center font-bold text-base">Web Application Development</h2>
+                    <p class="text-center text-sm">Start from 1000 USD for project base or 35 USD per hour</p>
+                </div>
+                <div class="rounded-lg border-2 border-color: inherit; w-5/12 m-1 p-5">
+                    <img src="./property/wordpress-lockup logo.png" alt="" class="mx-auto">
+                    <h2 class="text-center font-bold text-base">Wordpress Theme Development</h2>
+                    <p class="text-center text-sm">Start from 600 USD for project base or 35 USD per hour</p>
+                </div>
+                <div class="rounded-lg border-2 border-color: inherit; w-5/12 m-1 p-5">
+                    <img src="./property/www.png" alt="" class="mx-auto">
+                    <h2 class="text-center font-bold text-base">Custom App/Plugins Development</h2>
+                    <p class="text-center text-sm">Start from 300 USD for project base or 35 USD per hour</p>
+                </div>
+            </div>
+            <div class="rounded-lg border-2 border-color: inherit; asistans w-1/5 m-1 p-5">
+                <img src="./property/assistance.png" alt="" class="mx-auto">
+                <h2 class="text-center font-bold text-base">Assistans Services</h2>
+                <p class="text-center text-sm">Start from 33 USD for project base or 35 USD per hour</p>
+                <ul class="text-center font-bold text-sm">
+                    <li>More Services</li>
+                    <li>Technical Assistans</li>
+                    <li>Support Assistans</li>
+                    <li>VIP Assistans</li>
+                    <li>Social Media Admin</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <main>
+        <div class="mx-auto">
+        <h1 class="text-center font-bold p-20">What We Do</h1>
+        <p class="text-center">Lörem ipsum patev antifili astrokålonat. Vanat aheten. Ekofiering makrora, på trekavis. Makrona tregät plang. Bekässade kast, eftersom sore. </p>
+            <ul class="flex gap-5 items-center">
+                <li>
+                    <img src="./property/Desain.png" alt="">
+                </li>
+                <li>
+                    <img src="./property/front-end.png" alt="">
+                </li>
+                <li>
+                    <img src="./property/back-end.png" alt="">
+                </li>
+                <li>
+                    <img src="./property/ceck.png" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="mx-auto">
+            <h1 class="text-center font-bold p-20">Our Work</h1>
+            <p class="text-center">Lörem ipsum patev antifili astrokålonat. Vanat aheten. Ekofiering makrora, på trekavis. Makrona tregät plang. Bekässade kast, eftersom sore. </p>
+            <ul>
+                <li>
+                    <img src="./property/Retainer.png" alt="">
+                </li>
+                <li>
+                    <img src="./property/Beacukai.png" alt="">
+                </li>
+                <li>
+                    <img src="./property/Federasi.png" alt="">
+                </li>
+                <li>
+                    <img src="./property/Orely.png" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="max-w-[700px] mx-auto mt-[100px]">
+            <h2 class="text-2xl lg:text-4xl xl:text-5xl text-center font-nunito font-bold"><span class="text-gradient"> What people say about?</span>Mangcoding Team</h2>
+            <p class="text-center py-5">“ It was a great experience to work with Mangcoding, we love the details result, and professionalism.
+                “</p>
+        </div>
+        <div class="mx-auto">
+            <h1 class="text-center font-bold p-20">Our Blog</h1>
+            <ul>
+                <li>
+                    <img src="./property/image 19.png" alt="">
+                </li>
+                <li>
+                    <img src="./property/image 20.png" alt="">
+                </li>
+                <li>
+                    <img src="./property/image 21.png" alt="">
+                </li>
+            </ul>
+        </div>   
+    </main>
+</body>
+</html>
